@@ -1,0 +1,82 @@
+{
+  "personalInfo": {
+    "name": "Nitish Kr Das",
+    "role": "Backend & Systems Engineer",
+    "opportunityStatus": "Open to opportunities",
+    "heroTagline": "Architecting scalable systems, optimizing data pipelines, and building robust APIs.",
+    "email": "nitishdas2023@outlook.com",
+    "githubUrl": "https://github.com/nitishkdas",
+    "linkedinUrl": "www.linkedin.com/in/nitish-kumar-das",
+    "copyright": "© 2026 Nitish Kr Das."
+  },
+  "navbar": {
+    "logoText": "&lt;NKD/&gt;",
+    "links": [
+      { "text": "About", "href": "#about" },
+      { "text": "Skills", "href": "#skills" },
+      { "text": "Projects", "href": "#projects" },
+      { "text": "Philosophy", "href": "#philosophy" }
+    ]
+  },
+  "heroSection": {
+    "primaryCta": { "text": "View Projects", "href": "#projects" },
+    "secondaryCta": { "text": "GitHub", "href": "#" }
+  },
+  "about": {
+    "titlePrefix": "01.",
+    "title": "ABOUT ME",
+    "heading": "Builder at heart.",
+    "paragraphs": [
+      "I am a software engineer focused on backend architecture and systems design. My approach to engineering is grounded in <span class=\"text-white font-medium\">correctness, performance, and scalability</span>. I don't just write code; I design systems that can endure high loads and evolve with business needs.",
+      "With a background in building distributed services, I enjoy tackling complex problems involving data consistency, concurrency, and cloud infrastructure. When I'm not optimizing SQL queries or refactoring microservices, I'm exploring the latest in GenAI to automate workflows."
+    ]
+  },
+  "skills": {
+    "titlePrefix": "02.",
+    "title": "TECHNICAL SKILLS",
+    "categories": [
+      {
+        "name": "Backend & APIs",
+        "icon": "dns",
+        "items": ["Python", "FastAPI",  "REST"]
+      },
+      {
+        "name": "Databases",
+        "icon": "database",
+        "items": ["PostgreSQL", "Redis", "MongoDB","SQlite"]
+      },
+      {
+        "name": "Systems & DevOps",
+        "icon": "cloud",
+        "items": ["Docker", "Oracle Cloud", "AWS", "CI/CD", "Linux"]
+      },
+      {
+        "name": "AI & GenAI",
+        "icon": "psychology",
+        "items": ["LangChain", "OpenAI API", "RAG", "Vector DBs"]
+      }
+    ]
+  },
+  "projects": {
+    "titlePrefix": "03.",
+    "title": "SELECTED PROJECTS",
+    "list": [
+      
+    ]
+  },
+  "philosophy": {
+    "titlePrefix": "04.",
+    "title": "ENGINEERING PHILOSOPHY",
+    "codeBlock": {
+      "classLine": "<span class=\"text-purple-400\">class</span> <span class=\"text-yellow-200\">Engineer</span>:",
+      "docstring": "<span class=\"text-gray-400\">\"\"\"<br/>Software is a liability, not an asset. The goal is to solve problems with the minimum amount of complexity required.<br/><br/>1. Make it work.<br/>2. Make it right.<br/>3. Make it fast.<br/>\"\"\"</span>",
+      "function": "<span class=\"text-blue-400\">def</span> <span class=\"text-yellow-200\">build</span>(<span class=\"text-orange-300\">self</span>):<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"text-blue-400\">return</span> <span class=\"text-green-300\">\"Simple, Scalable, reliable.\"</span>"
+    }
+  },
+  "contact": {
+    "callToAction": "Let's build something scalable."
+  }
+}
+
+
+

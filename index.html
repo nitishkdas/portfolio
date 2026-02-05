@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title id="page-title"></title>
+<meta name="description" content="Backend & Systems Engineer specializing in scalable systems, data pipelines, and robust APIs. View my portfolio and projects." />
+<meta name="keywords" content="Backend Engineer, Systems Engineer, Software Developer, Python, Go, FastAPI, Django, Kubernetes, Docker, AWS" />
+<meta name="author" content="Nitish Kr Das" />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph / Social Media -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nitish Kr Das - Backend & Systems Engineer" />
+<meta property="og:description" content="Backend & Systems Engineer specializing in scalable systems, data pipelines, and robust APIs." />
+<meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+<meta property="og:url" content="https://yourdomain.com" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nitish Kr Das - Backend & Systems Engineer" />
+<meta name="twitter:description" content="Backend & Systems Engineer specializing in scalable systems, data pipelines, and robust APIs." />
+<meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" />
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&amp;family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<!-- Local Tailwind CSS Build -->
+<link href="dist/output.css" rel="stylesheet"/>
+</head>
+<body class="bg-background-dark text-text-main font-body selection:bg-primary/30 selection:text-white antialiased overflow-x-hidden">
+<!-- Skip to main content for accessibility -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Skip to main content</a>
+
+<!-- Loading State -->
+<div id="page-loader" class="fixed inset-0 z-50 flex items-center justify-center bg-background-dark transition-opacity duration-300" aria-hidden="true">
+<div class="flex flex-col items-center gap-4">
+<div class="w-12 h-12 border-4 border-border-color border-t-primary rounded-full animate-spin" role="status" aria-label="Loading"></div>
+<p class="text-text-muted text-sm font-mono">Loading portfolio...</p>
+</div>
+</div>
+
+<!-- Error State (hidden by default) -->
+<div id="error-message" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-background-dark p-6">
+<div class="bg-card-dark border border-red-500/30 rounded-lg p-8 max-w-md text-center">
+<span class="material-symbols-outlined text-red-500 text-4xl mb-4">error</span>
+<h2 class="text-xl font-bold text-white mb-2">Something went wrong</h2>
+<p class="text-text-muted mb-6">Unable to load portfolio content. Please try refreshing the page.</p>
+<button onclick="window.location.reload()" class="px-6 py-2 bg-primary hover:bg-primary-hover text-white font-bold rounded-lg transition-colors">
+Refresh Page
+</button>
+</div>
+</div>
+
+<!-- Navbar -->
+<header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-background-dark/80 border-b border-border-color" role="banner">
+<div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span id="navbar-logo" class="font-mono text-primary font-bold text-lg" aria-label="Portfolio logo"></span>
+</div>
+            <nav id="navbar-links" class="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation"></nav>
+            <!-- Mobile Menu Icon -->
+            <button id="mobile-menu-button" class="md:hidden text-white p-2 rounded-lg hover:bg-card-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+            </div>
+            </header>
+            <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-16 z-30 flex-col items-center bg-background-dark/95 backdrop-blur-md border-b border-border-color pb-4" role="navigation" aria-label="Mobile navigation">
+                <nav class="flex flex-col items-center gap-4 py-2 w-full px-6"></nav>
+            </div>
+<main id="main-content" class="flex flex-col w-full pt-16" role="main">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-16 grid-bg" aria-labelledby="hero-name">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background-dark pointer-events-none"></div>
+<div class="max-w-4xl px-6 w-full z-10 text-center flex flex-col items-center gap-6">
+<div id="opportunity-status" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-accent text-xs font-mono mb-4">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+</span>
+                    </div>
+<h1 id="hero-name" class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-white leading-tight">
+                    </h1>
+<h2 id="hero-role" class="text-xl md:text-2xl text-text-muted font-normal max-w-2xl">
+                    </h2>
+<p id="hero-tagline" class="text-base text-text-muted/80 max-w-lg mt-2 font-mono text-sm">
+                    </p>
+<div id="hero-ctas" class="flex flex-wrap justify-center gap-4 mt-8"></div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 border-t border-border-color bg-background-dark" id="about">
+<div class="max-w-3xl mx-auto px-6">
+<h3 id="about-title" class="text-accent font-mono text-sm mb-4"></h3>
+<h2 id="about-heading" class="text-3xl font-display font-bold text-white mb-8"></h2>
+<div id="about-paragraphs" class="prose prose-invert prose-lg text-text-muted font-body leading-relaxed"></div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-24 border-t border-border-color bg-card-dark/30" id="skills">
+<div class="max-w-5xl mx-auto px-6">
+<h3 id="skills-title" class="text-accent font-mono text-sm mb-10"></h3>
+<div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-24 border-t border-border-color bg-background-dark" id="projects">
+<div class="max-w-4xl mx-auto px-6">
+<h3 id="projects-title" class="text-accent font-mono text-sm mb-10"></h3>
+<div id="projects-list" class="flex flex-col gap-12"></div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-24 border-t border-border-color bg-card-dark/30" id="philosophy">
+<div class="max-w-3xl mx-auto px-6">
+<h3 id="philosophy-title" class="text-accent font-mono text-sm mb-8"></h3>
+<div id="philosophy-code-block" class="bg-card-dark border border-border-color rounded-lg p-8 font-mono text-sm text-text-muted shadow-xl"></div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="border-t border-border-color bg-background-dark py-12" id="contact" role="contentinfo">
+<div class="max-w-5xl mx-auto px-6 flex flex-col items-center">
+<h2 id="footer-cta" class="text-2xl font-bold font-display text-white mb-6"></h2>
+<nav id="footer-social-links" class="flex gap-8 mb-8" aria-label="Social media links"></nav>
+<p id="footer-copyright" class="text-text-muted text-sm font-mono"></p>
+</div>
+</footer>
+</main><script src="script.js" defer></script>
+</body></html>

@@ -1,0 +1,29 @@
+{
+        "title": "Distributed Task Queue System",
+        "tagline": "// High-throughput asynchronous processing",
+        "technologies": ["Golang", "Redis", "gRPC", "Docker"],
+        "description": "Designed and implemented a custom task queue capable of handling 10k+ concurrent jobs with retries, dead-letter queues, and rate limiting. Replaced a legacy Celery implementation, reducing infrastructure costs by 40% and latency by 60%.",
+        "links": [
+          { "text": "Source", "icon": "code", "href": "#" },
+          { "text": "Demo", "icon": "open_in_new", "href": "#" }
+        ]
+      },
+      {
+        "title": "Real-time Analytics Pipeline",
+        "tagline": "// Data ingestion at scale",
+        "technologies": ["Python", "Kafka", "ClickHouse", "FastAPI"],
+        "description": "Architected a data pipeline to ingest and visualize user activity logs in real-time. Leveraged Kafka for event streaming and ClickHouse for sub-second analytical queries on millions of rows. Built a FastAPI wrapper to serve aggregated metrics to the frontend.",
+        "links": [
+          { "text": "Source", "icon": "code", "href": "#" }
+        ]
+      },
+      {
+        "title": "AI-Powered Code Review Agent",
+        "tagline": "// GenAI workflow automation",
+        "technologies": ["LangChain", "OpenAI", "GitHub Actions", "PostgreSQL (pgvector)"],
+        "description": "Developed a GitHub bot that automatically reviews PRs, identifies security vulnerabilities, and suggests performance improvements. Uses RAG (Retrieval-Augmented Generation) with a vector database of internal best practices documentation to provide context-aware feedback.",
+        "links": [
+          { "text": "Source", "icon": "code", "href": "#" },
+          { "text": "Case Study", "icon": "description", "href": "#" }
+        ]
+      }
