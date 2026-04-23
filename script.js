@@ -91,6 +91,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
+
+    function setTheme(theme) {
+        const html = document.documentElement;
+        if (theme === 'dark') {
+            html.classList.add('dark');
+            if (themeIcon) themeIcon.textContent = 'dark_mode';
+            if (themeIconMobile) themeIconMobile.textContent = 'dark_mode';
+        } else {
+            html.classList.remove('dark');
+            if (themeIcon) themeIcon.textContent = 'light_mode';
+            if (themeIconMobile) themeIconMobile.textContent = 'light_mode';
+        }
+        localStorage.setItem('theme', theme);
+    }
+
+    function toggleTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        setTheme(isDark ? 'light' : 'dark');
+    }
+
+    // Load saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+
     // Validate required data fields
     function validateData(data) {
         const requiredFields = ['personalInfo', 'navbar', 'about', 'skills', 'projects', 'philosophy', 'contact'];

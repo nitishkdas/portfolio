@@ -20,12 +20,19 @@ module.exports = {
             colors: {
                 "primary": "#3a73f8",
                 "primary-hover": "#2563eb",
+                "accent": "#38bdf8",
+                // Light mode defaults
+                "background": "#ffffff",
+                "card": "#f5f5f5",
+                "text-main": "#111111",
+                "text-muted": "#4a5568",
+                "border-color": "#e2e8f0",
+                // Dark mode variants (used with dark: prefix)
                 "background-dark": "#0f1115",
                 "card-dark": "#161b22",
-                "accent": "#38bdf8",
-                "text-main": "#f0f6fc",
-                "text-muted": "#8b949e",
-                "border-color": "#30363d",
+                "text-main-dark": "#f0f6fc",
+                "text-muted-dark": "#8b949e",
+                "border-color-dark": "#30363d",
             },
             fontFamily: {
                 "display": ["Inter", "sans-serif"],
