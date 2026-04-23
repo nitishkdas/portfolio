@@ -87,9 +87,13 @@ Refresh Page
                      <span class="material-symbols-outlined text-sm text-text-muted dark:text-text-muted-dark group-hover:text-accent dark:group-hover:text-accent-dark" id="theme-icon-mobile">light_mode</span>
                  </button>
              </div>
-<main id="main-content" class="flex flex-col w-full pt-16" role="main">
+<main id="main-content" class="relative z-10 flex flex-col w-full pt-16" role="main">
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center pt-16 bg-grid-pattern dark:bg-grid-pattern-dark" aria-labelledby="hero-name">
+<section class="relative min-h-screen flex items-center justify-center pt-16 bg-grid-pattern dark:bg-grid-pattern-dark scroll-animate" aria-labelledby="hero-name">
+<!-- 3D Interactive Background (Hero only) -->
+<div id="tubes-wrapper" class="absolute inset-0 z-0" style="touch-action: none;">
+    <canvas id="tubes-canvas" class="w-full h-full block"></canvas>
+</div>
 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background dark:to-background-dark pointer-events-none"></div>
 <div class="max-w-4xl px-6 w-full z-10 text-center flex flex-col items-center gap-6">
 <div id="opportunity-status" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-accent dark:text-accent-dark text-xs font-mono mb-4">
@@ -108,7 +112,7 @@ Refresh Page
 </div>
 </section>
 <!-- About Section -->
-<section class="py-24 border-t border-border-color dark:border-border-color-dark bg-background dark:bg-background-dark" id="about">
+<section class="py-24 border-t border-border-color dark:border-border-color-dark bg-background dark:bg-background-dark scroll-animate" id="about">
 <div class="max-w-3xl mx-auto px-6">
 <h3 id="about-title" class="text-accent font-mono text-sm mb-4"></h3>
 <h2 id="about-heading" class="text-3xl font-display font-bold text-text-main dark:text-text-main-dark mb-8"></h2>
@@ -116,31 +120,31 @@ Refresh Page
 </div>
 </section>
 <!-- Skills Section -->
-<section class="py-24 border-t border-border-color dark:border-border-color-dark bg-card dark:bg-card-dark/30" id="skills">
+<section class="py-24 border-t border-border-color dark:border-border-color-dark bg-card dark:bg-card-dark/30 scroll-animate" id="skills">
 <div class="max-w-5xl mx-auto px-6">
 <h3 id="skills-title" class="text-accent font-mono text-sm mb-10"></h3>
 <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
 </div>
 </section>
 <!-- Projects Section -->
-<section class="py-24 border-t border-border-color dark:border-border-color-dark bg-background dark:bg-background-dark" id="projects">
+<section class="py-24 border-t border-border-color dark:border-border-color-dark bg-background dark:bg-background-dark scroll-animate" id="projects">
 <div class="max-w-4xl mx-auto px-6">
 <h3 id="projects-title" class="text-accent font-mono text-sm mb-10"></h3>
 <div id="projects-list" class="flex flex-col gap-12"></div>
 </div>
 </section>
 <!-- Philosophy Section -->
-<section class="py-24 border-t border-border-color dark:border-border-color-dark bg-card dark:bg-card-dark/30" id="philosophy">
+<section class="py-24 border-t border-border-color dark:border-border-color-dark bg-card dark:bg-card-dark/30 scroll-animate" id="philosophy">
 <div class="max-w-3xl mx-auto px-6">
 <h3 id="philosophy-title" class="text-accent font-mono text-sm mb-8"></h3>
 <div id="philosophy-code-block" class="bg-card dark:bg-card-dark border border-border-color dark:border-border-color-dark rounded-lg p-8 font-mono text-sm text-text-muted dark:text-text-muted-dark shadow-xl"></div>
 </div>
 </section>
 <!-- Footer -->
-<footer class="border-t border-border-color dark:border-border-color-dark bg-background dark:bg-background-dark py-12" id="contact" role="contentinfo">
+<footer class="border-t border-border-color dark:border-border-color-dark bg-background dark:bg-background-dark py-12 scroll-animate" id="contact" role="contentinfo">
 <div class="max-w-5xl mx-auto px-6 flex flex-col items-center">
 <h2 id="footer-cta" class="text-2xl font-bold font-display text-text-main dark:text-text-main-dark mb-6"></h2>
-<nav id="footer-social-links" class="flex gap-8 mb-8" aria-label="Social media links"></nav>
+        <div id="footer-social-links" class="flex gap-8 mb-8 pointer-events-auto" aria-label="Social media links"></div>
 <p id="footer-copyright" class="text-text-muted dark:text-text-muted-dark text-sm font-mono"></p>
 </div>
 </footer>

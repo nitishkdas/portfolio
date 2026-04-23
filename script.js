@@ -83,12 +83,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Hide loader
+    // Hide loader with animation
     function hideLoader() {
         if (pageLoader) {
             pageLoader.style.opacity = '0';
-            setTimeout(() => pageLoader.style.display = 'none', 300);
+            pageLoader.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                pageLoader.style.display = 'none';
+                // Trigger scroll animations after page loads
+                initScrollAnimations();
+            }, 300);
         }
+    }
+
+    // Scroll Animations using Intersection Observer
+    function initScrollAnimations() {
+        const scrollElements = document.querySelectorAll('.scroll-animate');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        scrollElements.forEach(el => observer.observe(el));
     }
 
     // Theme Toggle Logic
@@ -101,14 +125,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const html = document.documentElement;
         if (theme === 'dark') {
             html.classList.add('dark');
-            if (themeIcon) themeIcon.textContent = 'light_mode';
-            if (themeIconMobile) themeIconMobile.textContent = 'light_mode';
+            if (themeIcon) { themeIcon.textContent = 'light_mode'; themeIcon.classList.add('theme-toggle-animate'); }
+            if (themeIconMobile) { themeIconMobile.textContent = 'light_mode'; themeIconMobile.classList.add('theme-toggle-animate'); }
         } else {
             html.classList.remove('dark');
-            if (themeIcon) themeIcon.textContent = 'dark_mode';
-            if (themeIconMobile) themeIconMobile.textContent = 'dark_mode';
+            if (themeIcon) { themeIcon.textContent = 'dark_mode'; themeIcon.classList.add('theme-toggle-animate'); }
+            if (themeIconMobile) { themeIconMobile.textContent = 'dark_mode'; themeIconMobile.classList.add('theme-toggle-animate'); }
         }
         localStorage.setItem('theme', theme);
+        
+        // Remove animation class after animation completes
+        setTimeout(() => {
+            if (themeIcon) themeIcon.classList.remove('theme-toggle-animate');
+            if (themeIconMobile) themeIconMobile.classList.remove('theme-toggle-animate');
+        }, 300);
     }
 
     function toggleTheme() {
@@ -122,6 +152,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
     if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+
+    // 3D Tubes Background Initialization (Hero section only)
+    let tubesInstance = null;
+
+    function initTubesBackground() {
+        const canvas = document.getElementById('tubes-canvas');
+        const wrapper = document.getElementById('tubes-wrapper');
+        if (!canvas || !wrapper) return;
+
+        // Use dynamic import like the reference implementation
+        const initTubes = async () => {
+            try {
+                const module = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
+                const TubesCursor = module.default;
+
+                tubesInstance = TubesCursor(canvas, {
+                    tubes: {
+                        colors: ["#f967fb", "#53bc28", "#6958d5"],
+                        lights: {
+                            intensity: 200,
+                            colors: ["#83f36e", "#fe8a2e", "#ff008a", "#60aed5"]
+                        }
+                    }
+                });
+
+                // Click wrapper to randomize colors
+                wrapper.addEventListener('click', () => {
+                    if (!tubesInstance) return;
+                    
+                    const randomColors = (count) => {
+                        return Array(count).fill(0).map(() => 
+                            "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')
+                        );
+                    };
+                    
+                    tubesInstance.tubes.setColors(randomColors(3));
+                    tubesInstance.tubes.setLightsColors(randomColors(4));
+                });
+
+            } catch (error) {
+                console.error('Failed to initialize tubes:', error);
+            }
+        };
+
+        initTubes();
+    }
+
+    initTubesBackground();
 
     // Validate required data fields
     function validateData(data) {
