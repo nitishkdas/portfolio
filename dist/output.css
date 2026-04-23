@@ -570,6 +570,10 @@ video {
   pointer-events: none;
 }
 
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
 .visible {
   visibility: visible;
 }
@@ -609,6 +613,10 @@ video {
 
 .top-16 {
   top: 4rem;
+}
+
+.z-0 {
+  z-index: 0;
 }
 
 .z-10 {
