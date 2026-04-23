@@ -40,7 +40,8 @@ module.exports = {
                 "mono": ["JetBrains Mono", "monospace"],
             },
             backgroundImage: {
-                'grid-pattern': "linear-gradient(to right, #30363d 1px, transparent 1px), linear-gradient(to bottom, #30363d 1px, transparent 1px)",
+                'grid-pattern': "linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)",
+                'grid-pattern-dark': "linear-gradient(to right, #30363d 1px, transparent 1px), linear-gradient(to bottom, #30363d 1px, transparent 1px)",
             }
         },
     },

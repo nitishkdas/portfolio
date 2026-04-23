@@ -45,7 +45,7 @@
 <div id="error-message" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-background dark:bg-background-dark p-6">
 <div class="bg-card dark:bg-card-dark border border-red-500/30 rounded-lg p-8 max-w-md text-center">
 <span class="material-symbols-outlined text-red-500 text-4xl mb-4">error</span>
-<h2 class="text-xl font-bold text-white mb-2">Something went wrong</h2>
+<h2 class="text-xl font-bold text-text-main dark:text-text-main-dark mb-2">Something went wrong</h2>
 <p class="text-text-muted dark:text-text-muted-dark mb-6">Unable to load portfolio content. Please try refreshing the page.</p>
 <button onclick="window.location.reload()" class="px-6 py-2 bg-primary hover:bg-primary-hover text-white font-bold rounded-lg transition-colors">
 Refresh Page
@@ -79,8 +79,8 @@ Refresh Page
             </div>
 <main id="main-content" class="flex flex-col w-full pt-16" role="main">
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center pt-16 grid-bg" aria-labelledby="hero-name">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background-dark pointer-events-none"></div>
+<section class="relative min-h-screen flex items-center justify-center pt-16 bg-grid-pattern dark:bg-grid-pattern-dark" aria-labelledby="hero-name">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background dark:to-background-dark pointer-events-none"></div>
 <div class="max-w-4xl px-6 w-full z-10 text-center flex flex-col items-center gap-6">
 <div id="opportunity-status" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-accent text-xs font-mono mb-4">
 <span class="relative flex h-2 w-2">
@@ -88,7 +88,7 @@ Refresh Page
 <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
 </span>
                     </div>
-<h1 id="hero-name" class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-white leading-tight">
+<h1 id="hero-name" class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-text-main dark:text-text-main-dark leading-tight">
                     </h1>
 <h2 id="hero-role" class="text-xl md:text-2xl text-text-muted dark:text-text-muted-dark font-normal max-w-2xl">
                     </h2>
@@ -101,8 +101,8 @@ Refresh Page
 <section class="py-24 border-t border-border-color dark:border-border-color-dark bg-background dark:bg-background-dark" id="about">
 <div class="max-w-3xl mx-auto px-6">
 <h3 id="about-title" class="text-accent font-mono text-sm mb-4"></h3>
-<h2 id="about-heading" class="text-3xl font-display font-bold text-white mb-8"></h2>
-<div id="about-paragraphs" class="prose prose-invert prose-lg text-text-muted dark:text-text-muted-dark font-body leading-relaxed"></div>
+<h2 id="about-heading" class="text-3xl font-display font-bold text-text-main dark:text-text-main-dark mb-8"></h2>
+<div id="about-paragraphs" class="prose prose-lg text-text-muted dark:text-text-muted-dark dark:prose-invert font-body leading-relaxed"></div>
 </div>
 </section>
 <!-- Skills Section -->
@@ -129,7 +129,7 @@ Refresh Page
 <!-- Footer -->
 <footer class="border-t border-border-color dark:border-border-color-dark bg-background dark:bg-background-dark py-12" id="contact" role="contentinfo">
 <div class="max-w-5xl mx-auto px-6 flex flex-col items-center">
-<h2 id="footer-cta" class="text-2xl font-bold font-display text-white mb-6"></h2>
+<h2 id="footer-cta" class="text-2xl font-bold font-display text-text-main dark:text-text-main-dark mb-6"></h2>
 <nav id="footer-social-links" class="flex gap-8 mb-8" aria-label="Social media links"></nav>
 <p id="footer-copyright" class="text-text-muted dark:text-text-muted-dark text-sm font-mono"></p>
 </div>

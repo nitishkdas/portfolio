@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const secondaryCta = document.createElement('a');
                         secondaryCta.href = data.personalInfo.githubUrl;
                         secondaryCta.setAttribute('aria-label', 'View GitHub Profile');
-                        secondaryCta.classList.add('flex', 'items-center', 'justify-center', 'px-6', 'py-3', 'bg-card-dark', 'border', 'border-border-color', 'hover:border-text-muted', 'text-white', 'text-base', 'font-bold', 'rounded-lg', 'transition-all', 'group', 'focus:outline-none', 'focus:ring-2', 'focus:ring-border-color');
+                        secondaryCta.classList.add('flex', 'items-center', 'justify-center', 'px-6', 'py-3', 'bg-card', 'dark:bg-card-dark', 'border', 'border-border-color', 'dark:border-border-color-dark', 'hover:border-text-muted', 'dark:hover:border-text-muted-dark', 'text-text-main', 'dark:text-white', 'text-base', 'font-bold', 'rounded-lg', 'transition-all', 'group', 'focus:outline-none', 'focus:ring-2', 'focus:ring-border-color', 'dark:focus:ring-border-color-dark');
                         secondaryCta.innerHTML = `<span class="mr-2">${data.heroSection.secondaryCta.text}</span><span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>`;
                         heroCtasContainer.appendChild(secondaryCta);
                     }
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         const header = document.createElement('div');
                         header.classList.add('flex', 'items-center', 'gap-3', 'mb-4');
-                        header.innerHTML = `<span class="material-symbols-outlined text-primary" aria-hidden="true">${category.icon || 'code'}</span><h4 class="text-lg font-bold font-display text-white">${category.name}</h4>`;
+                        header.innerHTML = `<span class="material-symbols-outlined text-primary" aria-hidden="true">${category.icon || 'code'}</span><h4 class="text-lg font-bold font-display text-text-main dark:text-white">${category.name}</h4>`;
                         skillBlock.appendChild(header);
 
                         const itemsContainer = document.createElement('div');
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         const titleDiv = document.createElement('div');
                         titleDiv.classList.add('flex', 'flex-col', 'md:flex-row', 'gap-2', 'items-baseline', 'mb-2');
-                        titleDiv.innerHTML = `<h4 class="text-2xl font-bold font-display text-white group-hover:text-primary transition-colors">${project.title}</h4><span class="text-sm font-mono text-text-muted">${project.tagline}</span>`;
+                        titleDiv.innerHTML = `<h4 class="text-2xl font-bold font-display text-text-main dark:text-white group-hover:text-primary transition-colors">${project.title}</h4><span class="text-sm font-mono text-text-muted dark:text-text-muted-dark">${project.tagline}</span>`;
                         projectDiv.appendChild(titleDiv);
 
                         const techDiv = document.createElement('div');
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (project.links) {
                             project.links.forEach(link => {
                                 const a = document.createElement('a');
-                                a.classList.add('text-sm', 'font-bold', 'text-white', 'hover:text-primary', 'flex', 'items-center', 'gap-1', 'focus:outline-none', 'focus:text-primary');
+                                a.classList.add('text-sm', 'font-bold', 'text-text-main', 'dark:text-white', 'hover:text-primary', 'flex', 'items-center', 'gap-1', 'focus:outline-none', 'focus:text-primary');
                                 a.href = link.href;
                                 a.setAttribute('aria-label', `${link.text} - ${project.title}`);
                                 a.innerHTML = `<span class="material-symbols-outlined text-base" aria-hidden="true">${link.icon}</span> ${link.text}`;
@@ -423,12 +423,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const footerSocialLinksContainer = document.getElementById('footer-social-links');
                 if (footerSocialLinksContainer) {
                     if (data.personalInfo.email) {
-                        const emailLink = createLink('Email', `mailto:${data.personalInfo.email}`, ['text-text-muted', 'hover:text-white', 'transition-colors', 'flex', 'items-center', 'gap-2', 'focus:outline-none', 'focus:text-white'], 'mail', 'Send email');
+                        const emailLink = createLink('Email', `mailto:${data.personalInfo.email}`, ['text-text-muted', 'dark:text-text-muted-dark', 'hover:text-text-main', 'dark:hover:text-white', 'transition-colors', 'flex', 'items-center', 'gap-2', 'focus:outline-none', 'focus:text-text-main', 'dark:focus:text-white'], 'mail', 'Send email');
                         footerSocialLinksContainer.appendChild(emailLink);
                     }
                     
                     if (data.personalInfo.githubUrl) {
-                        const githubLink = createLink('GitHub', data.personalInfo.githubUrl, ['text-text-muted', 'hover:text-white', 'transition-colors', 'flex', 'items-center', 'gap-2', 'focus:outline-none', 'focus:text-white'], 'code', 'View GitHub profile');
+                        const githubLink = createLink('GitHub', data.personalInfo.githubUrl, ['text-text-muted', 'dark:text-text-muted-dark', 'hover:text-text-main', 'dark:hover:text-white', 'transition-colors', 'flex', 'items-center', 'gap-2', 'focus:outline-none', 'focus:text-text-main', 'dark:focus:text-white'], 'code', 'View GitHub profile');
                         footerSocialLinksContainer.appendChild(githubLink);
                     }
                     
