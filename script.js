@@ -101,12 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const html = document.documentElement;
         if (theme === 'dark') {
             html.classList.add('dark');
-            if (themeIcon) themeIcon.textContent = 'dark_mode';
-            if (themeIconMobile) themeIconMobile.textContent = 'dark_mode';
-        } else {
-            html.classList.remove('dark');
             if (themeIcon) themeIcon.textContent = 'light_mode';
             if (themeIconMobile) themeIconMobile.textContent = 'light_mode';
+        } else {
+            html.classList.remove('dark');
+            if (themeIcon) themeIcon.textContent = 'dark_mode';
+            if (themeIconMobile) themeIconMobile.textContent = 'dark_mode';
         }
         localStorage.setItem('theme', theme);
     }
