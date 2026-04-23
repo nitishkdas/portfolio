@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nitish Kr Das - Backend &amp; Systems Engineer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&amp;family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a855f7",
+                        "primary-hover": "#9333ea",
+                        "background-light": "#fafafa",
+                        "card-light": "#ffffff",
+                        "accent": "#9333ea",
+                        "text-main": "#111827",
+                        "text-muted": "#4b5563",
+                        "border-color": "#e5e7eb",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["IBM Plex Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background-light text-text-main font-body selection:bg-primary/20 selection:text-primary-hover antialiased overflow-x-hidden">
+<!-- Navbar -->
+<div class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-border-color">
+<div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-mono text-primary font-bold text-lg">&lt;NKD/&gt;</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-text-muted hover:text-text-main transition-colors" href="#about">About</a>
+<a class="text-sm font-medium text-text-muted hover:text-text-main transition-colors" href="#skills">Skills</a>
+<a class="text-sm font-medium text-text-muted hover:text-text-main transition-colors" href="#projects">Projects</a>
+<a class="text-sm font-medium text-text-muted hover:text-text-main transition-colors" href="#philosophy">Philosophy</a>
+</nav>
+<a class="hidden md:flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-bold rounded-lg transition-colors" href="#contact">
+            Contact
+        </a>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-text-main">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<main class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-16 grid-bg">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background-light pointer-events-none"></div>
+<div class="max-w-4xl px-6 w-full z-10 text-center flex flex-col items-center gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-accent text-xs font-mono mb-4">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+</span>
+                Open to opportunities
+            </div>
+<h1 class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-text-main leading-tight">
+                Nitish Kr Das
+            </h1>
+<h2 class="text-xl md:text-2xl text-text-muted font-normal max-w-2xl">
+                Backend &amp; Systems Engineer
+            </h2>
+<p class="text-base text-text-muted/80 max-w-lg mt-2 font-mono text-sm">
+                Architecting scalable systems, optimizing data pipelines, and building robust APIs.
+            </p>
+<div class="flex flex-wrap justify-center gap-4 mt-8">
+<a class="flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary-hover text-white text-base font-bold rounded-lg transition-all shadow-lg shadow-primary/20" href="#projects">
+                    View Projects
+                </a>
+<a class="flex items-center justify-center px-6 py-3 bg-white border border-border-color hover:border-text-muted text-text-main text-base font-bold rounded-lg transition-all group" href="#">
+<span class="mr-2">GitHub</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 border-t border-border-color bg-background-light" id="about">
+<div class="max-w-3xl mx-auto px-6">
+<h3 class="text-accent font-mono text-sm mb-4">01. ABOUT ME</h3>
+<h2 class="text-3xl font-display font-bold text-text-main mb-8">Builder at heart.</h2>
+<div class="prose prose-lg text-text-muted font-body leading-relaxed">
+<p class="mb-6">
+                    I am a software engineer focused on backend architecture and systems design. My approach to engineering is grounded in <span class="text-text-main font-medium">correctness, performance, and scalability</span>. I don't just write code; I design systems that can endure high loads and evolve with business needs.
+                </p>
+<p>
+                    With a background in building distributed services, I enjoy tackling complex problems involving data consistency, concurrency, and cloud infrastructure. When I'm not optimizing SQL queries or refactoring microservices, I'm exploring the latest in GenAI to automate workflows.
+                </p>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-24 border-t border-border-color bg-white" id="skills">
+<div class="max-w-5xl mx-auto px-6">
+<h3 class="text-accent font-mono text-sm mb-10">02. TECHNICAL SKILLS</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Skill Block 1 -->
+<div class="bg-background-light border border-border-color rounded-xl p-6 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary">dns</span>
+<h4 class="text-lg font-bold font-display text-text-main">Backend &amp; APIs</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Python</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Go</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">FastAPI</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Django</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">REST</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">gRPC</span>
+</div>
+</div>
+<!-- Skill Block 2 -->
+<div class="bg-background-light border border-border-color rounded-xl p-6 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary">database</span>
+<h4 class="text-lg font-bold font-display text-text-main">Databases</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">PostgreSQL</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Redis</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">MongoDB</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Elasticsearch</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">SQL Optimization</span>
+</div>
+</div>
+<!-- Skill Block 3 -->
+<div class="bg-background-light border border-border-color rounded-xl p-6 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary">cloud</span>
+<h4 class="text-lg font-bold font-display text-text-main">Systems &amp; DevOps</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Docker</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Kubernetes</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">AWS</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">CI/CD</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Terraform</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Linux</span>
+</div>
+</div>
+<!-- Skill Block 4 -->
+<div class="bg-background-light border border-border-color rounded-xl p-6 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h4 class="text-lg font-bold font-display text-text-main">AI &amp; GenAI</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">LangChain</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">OpenAI API</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">RAG</span>
+<span class="px-3 py-1 bg-white border border-border-color rounded text-xs font-mono text-text-muted hover:text-text-main hover:border-accent transition-colors">Vector DBs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-24 border-t border-border-color bg-background-light" id="projects">
+<div class="max-w-4xl mx-auto px-6">
+<h3 class="text-accent font-mono text-sm mb-10">03. SELECTED PROJECTS</h3>
+<div class="flex flex-col gap-12">
+<!-- Project 1 -->
+<div class="group">
+<div class="flex flex-col md:flex-row gap-2 items-baseline mb-2">
+<h4 class="text-2xl font-bold font-display text-text-main group-hover:text-primary transition-colors">Distributed Task Queue System</h4>
+<span class="text-sm font-mono text-text-muted">// High-throughput asynchronous processing</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Golang</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Redis</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">gRPC</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Docker</span>
+</div>
+<p class="text-text-muted leading-relaxed mb-4 border-l-2 border-border-color pl-4">
+                        Designed and implemented a custom task queue capable of handling 10k+ concurrent jobs with retries, dead-letter queues, and rate limiting. Replaced a legacy Celery implementation, reducing infrastructure costs by 40% and latency by 60%.
+                    </p>
+<div class="flex gap-4">
+<a class="text-sm font-bold text-text-main hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">code</span> Source
+                        </a>
+<a class="text-sm font-bold text-text-main hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">open_in_new</span> Demo
+                        </a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group">
+<div class="flex flex-col md:flex-row gap-2 items-baseline mb-2">
+<h4 class="text-2xl font-bold font-display text-text-main group-hover:text-primary transition-colors">Real-time Analytics Pipeline</h4>
+<span class="text-sm font-mono text-text-muted">// Data ingestion at scale</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Python</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Kafka</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">ClickHouse</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">FastAPI</span>
+</div>
+<p class="text-text-muted leading-relaxed mb-4 border-l-2 border-border-color pl-4">
+                        Architected a data pipeline to ingest and visualize user activity logs in real-time. Leveraged Kafka for event streaming and ClickHouse for sub-second analytical queries on millions of rows. Built a FastAPI wrapper to serve aggregated metrics to the frontend.
+                    </p>
+<div class="flex gap-4">
+<a class="text-sm font-bold text-text-main hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">code</span> Source
+                        </a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group">
+<div class="flex flex-col md:flex-row gap-2 items-baseline mb-2">
+<h4 class="text-2xl font-bold font-display text-text-main group-hover:text-primary transition-colors">AI-Powered Code Review Agent</h4>
+<span class="text-sm font-mono text-text-muted">// GenAI workflow automation</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">LangChain</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">OpenAI</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">GitHub Actions</span>
+<span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">PostgreSQL (pgvector)</span>
+</div>
+<p class="text-text-muted leading-relaxed mb-4 border-l-2 border-border-color pl-4">
+                        Developed a GitHub bot that automatically reviews PRs, identifies security vulnerabilities, and suggests performance improvements. Uses RAG (Retrieval-Augmented Generation) with a vector database of internal best practices documentation to provide context-aware feedback.
+                    </p>
+<div class="flex gap-4">
+<a class="text-sm font-bold text-text-main hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">code</span> Source
+                        </a>
+<a class="text-sm font-bold text-text-main hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">description</span> Case Study
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-24 border-t border-border-color bg-white" id="philosophy">
+<div class="max-w-3xl mx-auto px-6">
+<h3 class="text-accent font-mono text-sm mb-8">04. ENGINEERING PHILOSOPHY</h3>
+<div class="bg-background-light border border-border-color rounded-lg p-8 font-mono text-sm text-text-muted shadow-lg">
+<div class="flex gap-2 mb-4">
+<div class="w-3 h-3 rounded-full bg-red-400"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+<div class="w-3 h-3 rounded-full bg-green-400"></div>
+</div>
+<p class="mb-4">
+<span class="text-purple-600">class</span> <span class="text-blue-600">Engineer</span>:
+                </p>
+<div class="pl-4 border-l border-border-color ml-1">
+<p class="mb-2 text-gray-500">
+                        """<br/>
+                        Software is a liability, not an asset. The goal is to solve problems with the minimum amount of complexity required.<br/><br/>
+                        1. Make it work.<br/>
+                        2. Make it right.<br/>
+                        3. Make it fast.<br/>
+                        """
+                    </p>
+<br/>
+<p>
+<span class="text-purple-600">def</span> <span class="text-blue-600">build</span>(<span class="text-orange-600">self</span>):<br/>
+                            <span class="text-purple-600">return</span> <span class="text-green-600">"Simple, Scalable, reliable."</span>
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="border-t border-border-color bg-background-light py-12" id="contact">
+<div class="max-w-5xl mx-auto px-6 flex flex-col items-center">
+<h2 class="text-2xl font-bold font-display text-text-main mb-6">Let's build something scalable.</h2>
+<div class="flex gap-8 mb-8">
+<a class="text-text-muted hover:text-text-main transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">mail</span> Email
+                </a>
+<a class="text-text-muted hover:text-text-main transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">code</span> GitHub
+                </a>
+<a class="text-text-muted hover:text-text-main transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">work</span> LinkedIn
+                </a>
+</div>
+<p class="text-text-muted text-sm font-mono">
+                © 2023 Nitish Kr Das. All systems operational.
+            </p>
+</div>
+</footer>
+</main>
+</body></html>

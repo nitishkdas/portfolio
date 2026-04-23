@@ -84,11 +84,11 @@
   "philosophy": {
     "titlePrefix": "04.",
     "title": "ENGINEERING PHILOSOPHY",
-    "codeBlock": {
-      "classLine": "<span class=\"text-purple-400\">class</span> <span class=\"text-yellow-200\">Engineer</span>:",
-      "docstring": "<span class=\"text-gray-400\">\"\"\"<br/>Software is a liability, not an asset. The goal is to solve problems with the minimum amount of complexity required.<br/><br/>1. Make it work.<br/>2. Make it right.<br/>3. Make it fast.<br/>\"\"\"</span>",
-      "function": "<span class=\"text-blue-400\">def</span> <span class=\"text-yellow-200\">build</span>(<span class=\"text-orange-300\">self</span>):<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"text-blue-400\">return</span> <span class=\"text-green-300\">\"Simple, Scalable, reliable.\"</span>"
-    }
+        "codeBlock": {
+            "classLine": "<span class=\"text-purple-600 dark:text-purple-400\">class</span> <span class=\"text-yellow-200 dark:text-yellow-200\">Engineer</span>:",
+            "docstring": "<span class=\"text-gray-500 dark:text-gray-400\">\"\"\"<br/>Software is a liability, not an asset. The goal is to solve problems with the minimum amount of complexity required.<br/><br/>1. Make it work.<br/>2. Make it right.<br/>3. Make it fast.<br/>\"\"\"</span>",
+            "function": "<span class=\"text-blue-600 dark:text-blue-400\">def</span> <span class=\"text-yellow-200 dark:text-yellow-200\">build</span>(<span class=\"text-orange-600 dark:text-orange-300\">self</span>):<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"text-blue-600 dark:text-blue-400\">return</span> <span class=\"text-green-600 dark:text-green-300\">\"Simple, Scalable, reliable.\"</span>"
+        }
   },
   "contact": {
     "callToAction": "Let's build something scalable."

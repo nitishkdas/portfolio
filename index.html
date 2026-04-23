@@ -29,7 +29,7 @@
 <!-- Local Tailwind CSS Build -->
 <link href="dist/output.css" rel="stylesheet"/>
 </head>
-<body class="bg-background dark:bg-background-dark text-text-main dark:text-text-main-dark font-body selection:bg-primary/30 selection:text-white antialiased overflow-x-hidden">
+<body class="bg-background dark:bg-background-dark text-text-main dark:text-text-main-dark font-body selection:bg-primary/20 selection:text-primary-hover antialiased overflow-x-hidden">
 <!-- Skip to main content for accessibility -->
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Skip to main content</a>
 
@@ -54,35 +54,45 @@ Refresh Page
 </div>
 
 <!-- Navbar -->
-<header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-background dark:bg-background-dark/80 border-b border-border-color dark:border-border-color-dark" role="banner">
+<header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-background/80 dark:bg-background-dark/80 border-b border-border-color dark:border-border-color-dark" role="banner">
 <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
 <div class="flex items-center gap-3">
 <span id="navbar-logo" class="font-mono text-primary font-bold text-lg" aria-label="Portfolio logo"></span>
 </div>
             <nav id="navbar-links" class="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation"></nav>
-            <!-- Theme Toggle -->
-            <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-card dark:hover:bg-card-dark transition-colors text-text-main dark:text-text-main-dark" aria-label="Toggle theme">
-                <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+            <!-- Terminal-style Theme Toggle -->
+            <button id="theme-toggle" class="ml-4 flex items-center gap-2 px-3 py-1.5 bg-card dark:bg-card-dark rounded-lg border border-border-color dark:border-border-color-dark hover:border-accent dark:hover:border-accent-dark transition-colors group font-mono" aria-label="Toggle theme">
+                <div class="flex gap-1" aria-hidden="true">
+                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                    <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                </div>
+                <span class="material-symbols-outlined text-sm text-text-muted dark:text-text-muted-dark group-hover:text-accent dark:group-hover:text-accent-dark" id="theme-icon">light_mode</span>
             </button>
             <!-- Mobile Menu Icon -->
-            <button id="mobile-menu-button" class="md:hidden text-white p-2 rounded-lg hover:bg-card dark:bg-card-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+            <button id="mobile-menu-button" class="md:hidden text-text-main dark:text-text-main-dark p-2 rounded-lg hover:bg-card dark:hover:bg-card-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
             <span class="material-symbols-outlined" aria-hidden="true">menu</span>
             </button>
             </div>
-            </header>
-            <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-16 z-30 flex-col items-center bg-background dark:bg-background-dark/95 backdrop-blur-md border-b border-border-color dark:border-border-color-dark pb-4" role="navigation" aria-label="Mobile navigation">
-                <nav class="flex flex-col items-center gap-4 py-2 w-full px-6"></nav>
-                <!-- Mobile Theme Toggle -->
-                <button id="theme-toggle-mobile" class="mt-4 p-2 rounded-lg hover:bg-card dark:hover:bg-card-dark transition-colors text-text-main dark:text-text-main-dark" aria-label="Toggle theme">
-                    <span class="material-symbols-outlined" id="theme-icon-mobile">light_mode</span>
-                </button>
-            </div>
+             </header>
+             <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-16 z-30 flex-col items-center bg-background dark:bg-background-dark/95 backdrop-blur-md border-b border-border-color dark:border-border-color-dark pb-4" role="navigation" aria-label="Mobile navigation">
+                 <nav class="flex flex-col items-center gap-4 py-2 w-full px-6"></nav>
+                 <!-- Mobile Terminal-style Theme Toggle -->
+                 <button id="theme-toggle-mobile" class="mt-4 flex items-center gap-2 px-3 py-1.5 bg-card dark:bg-card-dark rounded-lg border border-border-color dark:border-border-color-dark hover:border-accent dark:hover:border-accent-dark transition-colors group font-mono" aria-label="Toggle theme">
+                     <div class="flex gap-1" aria-hidden="true">
+                         <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                         <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                         <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                     </div>
+                     <span class="material-symbols-outlined text-sm text-text-muted dark:text-text-muted-dark group-hover:text-accent dark:group-hover:text-accent-dark" id="theme-icon-mobile">light_mode</span>
+                 </button>
+             </div>
 <main id="main-content" class="flex flex-col w-full pt-16" role="main">
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center pt-16 bg-grid-pattern dark:bg-grid-pattern-dark" aria-labelledby="hero-name">
 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background dark:to-background-dark pointer-events-none"></div>
 <div class="max-w-4xl px-6 w-full z-10 text-center flex flex-col items-center gap-6">
-<div id="opportunity-status" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-accent text-xs font-mono mb-4">
+<div id="opportunity-status" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-accent dark:text-accent-dark text-xs font-mono mb-4">
 <span class="relative flex h-2 w-2">
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
 <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>

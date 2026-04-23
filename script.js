@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (skillsGridContainer && data.skills.categories) {
                     data.skills.categories.forEach(category => {
                         const skillBlock = document.createElement('div');
-                        skillBlock.classList.add('bg-card-dark', 'border', 'border-border-color', 'rounded-xl', 'p-6', 'hover:border-primary/50', 'transition-colors');
+                        skillBlock.classList.add('bg-card', 'dark:bg-card-dark', 'border', 'border-border-color', 'dark:border-border-color-dark', 'rounded-xl', 'p-6', 'hover:border-primary/50', 'transition-colors');
 
                         const header = document.createElement('div');
                         header.classList.add('flex', 'items-center', 'gap-3', 'mb-4');
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (category.items) {
                             category.items.forEach(item => {
                                 const span = document.createElement('span');
-                                span.classList.add('px-3', 'py-1', 'bg-background-dark', 'border', 'border-border-color', 'rounded', 'text-xs', 'font-mono', 'text-text-muted', 'hover:text-white', 'hover:border-accent', 'transition-colors');
+                                span.classList.add('px-3', 'py-1', 'bg-background', 'dark:bg-background-dark', 'border', 'border-border-color', 'dark:border-border-color-dark', 'rounded', 'text-xs', 'font-mono', 'text-text-muted', 'dark:text-text-muted-dark', 'hover:text-text-main', 'dark:hover:text-white', 'hover:border-accent', 'dark:hover:border-accent-dark', 'transition-colors');
                                 span.textContent = item;
                                 itemsContainer.appendChild(span);
                             });
@@ -391,12 +391,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     // Add indented content wrapper
                     const indentedDiv = document.createElement('div');
-                    indentedDiv.classList.add('pl-4', 'border-l', 'border-border-color', 'ml-1');
+                    indentedDiv.classList.add('pl-4', 'border-l', 'border-border-color', 'dark:border-border-color-dark', 'ml-1');
                     
-                    // Add docstring with mb-2 and text-gray-400
+                    // Add docstring - light mode uses text-gray-500, dark mode uses text-gray-400
                     if (data.philosophy.codeBlock.docstring) {
                         const docstringP = document.createElement('p');
-                        docstringP.classList.add('mb-2', 'text-gray-400');
+                        docstringP.classList.add('mb-2', 'text-gray-500', 'dark:text-gray-400');
                         docstringP.innerHTML = data.philosophy.codeBlock.docstring;
                         indentedDiv.appendChild(docstringP);
                     }
