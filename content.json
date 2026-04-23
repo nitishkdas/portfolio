@@ -61,7 +61,24 @@
     "titlePrefix": "03.",
     "title": "SELECTED PROJECTS",
     "list": [
-      
+      {
+        "title": "CloudSense",
+        "tagline": "Real-time IoT sensor monitoring",
+        "technologies": ["ESP32", "MQTT", "FastAPI", "React", "MongoDB Atlas", "Docker"],
+        "description": "Full-stack IoT system that collects sensor data from ESP32 devices via MQTT, stores in MongoDB Atlas, and displays real-time on a React dashboard. Demonstrates hybrid cloud deployment.",
+        "links": [
+          {"text": "Source", "icon": "code", "href": "https://github.com/nitishkdas/cloudsense"}
+        ]
+      },
+      {
+        "title": "Songbook",
+        "tagline": "Digital hymnal collection app",
+        "technologies": ["Flutter", "GetX", "SQLite", "Dart"],
+        "description": "A digital hymnal collection app for NELC songbooks. Browse, search, and view hymns with lyrics. Supports dark/light theme and offline access.",
+        "links": [
+          {"text": "Source", "icon": "code", "href": "https://github.com/nitishkdas/songbook"}
+        ]
+      }
     ]
   },
   "philosophy": {
