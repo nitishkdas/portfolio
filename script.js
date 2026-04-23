@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
     if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
 
-    // 3D Tubes Background Initialization
+    // 3D Tubes Background Initialization (Hero section only)
     let tubesInstance = null;
 
     function initTubesBackground() {
