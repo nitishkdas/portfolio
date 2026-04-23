@@ -6,13 +6,7 @@ module.exports = {
         "./content.json"
     ],
     safelist: [
-        // Syntax highlighting colors for code block - Light mode
-        'text-purple-600',
-        'text-blue-600',
-        'text-orange-600',
-        'text-green-600',
-        'text-gray-500',
-        // Syntax highlighting colors for code block - Dark mode
+        // Syntax highlighting colors for code block - Dark mode only
         'text-purple-400',
         'text-yellow-200',
         'text-blue-400',
@@ -26,20 +20,13 @@ module.exports = {
             colors: {
                 "primary": "#a855f7",
                 "primary-hover": "#9333ea",
-                // Light mode defaults
-                "background": "#fafafa",
-                "card": "#ffffff",
-                "accent": "#9333ea",
-                "text-main": "#111827",
-                "text-muted": "#4b5563",
-                "border-color": "#e5e7eb",
-                // Dark mode variants
-                "background-dark": "#121212",
-                "card-dark": "#1e1e1e",
-                "accent-dark": "#c084fc",
-                "text-main-dark": "#f0f6fc",
-                "text-muted-dark": "#8b949e",
-                "border-color-dark": "#2d2d2d",
+                // Dark mode only (no light: prefix needed)
+                "background": "#121212",
+                "card": "#1e1e1e",
+                "accent": "#c084fc",
+                "text-main": "#f0f6fc",
+                "text-muted": "#8b949e",
+                "border-color": "#2d2d2d",
             },
             fontFamily: {
                 "display": ["Inter", "sans-serif"],
@@ -47,8 +34,7 @@ module.exports = {
                 "mono": ["JetBrains Mono", "monospace"],
             },
             backgroundImage: {
-                'grid-pattern': "linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px)",
-                'grid-pattern-dark': "linear-gradient(to right, #2d2d2d 1px, transparent 1px), linear-gradient(to bottom, #2d2d2d 1px, transparent 1px)",
+                'grid-pattern': "linear-gradient(to right, #2d2d2d 1px, transparent 1px), linear-gradient(to bottom, #2d2d2d 1px, transparent 1px)",
             }
         },
     },

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessage = document.getElementById('error-message');
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-
+    
     // Mobile Menu Logic
     function initializeMobileMenu() {
         if (mobileMenuButton && mobileMenu) {
@@ -115,45 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollElements.forEach(el => observer.observe(el));
     }
 
-    // Theme Toggle Logic
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-    const themeIcon = document.getElementById('theme-icon');
-    const themeIconMobile = document.getElementById('theme-icon-mobile');
-
-    function setTheme(theme) {
-        const html = document.documentElement;
-        if (theme === 'dark') {
-            html.classList.add('dark');
-            if (themeIcon) { themeIcon.textContent = 'light_mode'; themeIcon.classList.add('theme-toggle-animate'); }
-            if (themeIconMobile) { themeIconMobile.textContent = 'light_mode'; themeIconMobile.classList.add('theme-toggle-animate'); }
-        } else {
-            html.classList.remove('dark');
-            if (themeIcon) { themeIcon.textContent = 'dark_mode'; themeIcon.classList.add('theme-toggle-animate'); }
-            if (themeIconMobile) { themeIconMobile.textContent = 'dark_mode'; themeIconMobile.classList.add('theme-toggle-animate'); }
-        }
-        localStorage.setItem('theme', theme);
-        
-        // Remove animation class after animation completes
-        setTimeout(() => {
-            if (themeIcon) themeIcon.classList.remove('theme-toggle-animate');
-            if (themeIconMobile) themeIconMobile.classList.remove('theme-toggle-animate');
-        }, 300);
-    }
-
-    function toggleTheme() {
-        const isDark = document.documentElement.classList.contains('dark');
-        setTheme(isDark ? 'light' : 'dark');
-    }
-
-    // Load saved theme or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-
-    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
-    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
-
-    // 3D Tubes Background Initialization (Hero section only)
+    // 3D Tubes Background Initialization (Hero section only, dark mode only)
     let tubesInstance = null;
 
     function initTubesBackground() {
@@ -317,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const secondaryCta = document.createElement('a');
                         secondaryCta.href = data.personalInfo.githubUrl;
                         secondaryCta.setAttribute('aria-label', 'View GitHub Profile');
-                        secondaryCta.classList.add('flex', 'items-center', 'justify-center', 'px-6', 'py-3', 'bg-card', 'dark:bg-card-dark', 'border', 'border-border-color', 'dark:border-border-color-dark', 'hover:border-text-muted', 'dark:hover:border-text-muted-dark', 'text-text-main', 'dark:text-white', 'text-base', 'font-bold', 'rounded-lg', 'transition-all', 'group', 'focus:outline-none', 'focus:ring-2', 'focus:ring-border-color', 'dark:focus:ring-border-color-dark');
+                        secondaryCta.classList.add('flex', 'items-center', 'justify-center', 'px-6', 'py-3', 'bg-card', 'border', 'border-border-color', 'hover:border-text-muted', 'text-text-main', 'text-white', 'text-base', 'font-bold', 'rounded-lg', 'transition-all', 'group', 'focus:outline-none', 'focus:ring-2', 'focus:ring-border-color');
                         secondaryCta.innerHTML = `<span class="mr-2">${data.heroSection.secondaryCta.text}</span><span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>`;
                         heroCtasContainer.appendChild(secondaryCta);
                     }
@@ -350,20 +312,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (skillsGridContainer && data.skills.categories) {
                     data.skills.categories.forEach(category => {
                         const skillBlock = document.createElement('div');
-                        skillBlock.classList.add('bg-card', 'dark:bg-card-dark', 'border', 'border-border-color', 'dark:border-border-color-dark', 'rounded-xl', 'p-6', 'hover:border-primary/50', 'transition-colors');
-
+                        skillBlock.classList.add('bg-card', 'border', 'border-border-color', 'rounded-xl', 'p-6', 'hover:border-primary/50', 'transition-colors');
+                        
                         const header = document.createElement('div');
                         header.classList.add('flex', 'items-center', 'gap-3', 'mb-4');
-                        header.innerHTML = `<span class="material-symbols-outlined text-primary" aria-hidden="true">${category.icon || 'code'}</span><h4 class="text-lg font-bold font-display text-text-main dark:text-white">${category.name}</h4>`;
+                        header.innerHTML = `<span class="material-symbols-outlined text-primary" aria-hidden="true">${category.icon || 'code'}</span><h4 class="text-lg font-bold font-display text-text-main">${category.name}</h4>`;
                         skillBlock.appendChild(header);
-
+                        
                         const itemsContainer = document.createElement('div');
                         itemsContainer.classList.add('flex', 'flex-wrap', 'gap-2');
                         
                         if (category.items) {
                             category.items.forEach(item => {
                                 const span = document.createElement('span');
-                                span.classList.add('px-3', 'py-1', 'bg-background', 'dark:bg-background-dark', 'border', 'border-border-color', 'dark:border-border-color-dark', 'rounded', 'text-xs', 'font-mono', 'text-text-muted', 'dark:text-text-muted-dark', 'hover:text-text-main', 'dark:hover:text-white', 'hover:border-accent', 'dark:hover:border-accent-dark', 'transition-colors');
+                                span.classList.add('px-3', 'py-1', 'bg-background', 'border', 'border-border-color', 'rounded', 'text-xs', 'font-mono', 'text-text-muted', 'hover:text-text-main', 'hover:border-accent', 'transition-colors');
                                 span.textContent = item;
                                 itemsContainer.appendChild(span);
                             });
@@ -384,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (data.projects.list.length === 0) {
                         // Empty state - Terminal aesthetic
                         const emptyStateDiv = document.createElement('div');
-                        emptyStateDiv.classList.add('bg-card-dark', 'border', 'border-border-color', 'rounded-lg', 'p-8', 'font-mono', 'text-sm');
+                        emptyStateDiv.classList.add('bg-card', 'border', 'border-border-color', 'rounded-lg', 'p-8', 'font-mono', 'text-sm');
                         emptyStateDiv.innerHTML = `
                             <div class="flex gap-2 mb-4" aria-hidden="true">
                                 <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -404,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         const titleDiv = document.createElement('div');
                         titleDiv.classList.add('flex', 'flex-col', 'md:flex-row', 'gap-2', 'items-baseline', 'mb-2');
-                        titleDiv.innerHTML = `<h4 class="text-2xl font-bold font-display text-text-main dark:text-white group-hover:text-primary transition-colors">${project.title}</h4><span class="text-sm font-mono text-text-muted dark:text-text-muted-dark">${project.tagline}</span>`;
+                        titleDiv.innerHTML = `<h4 class="text-2xl font-bold font-display text-text-main group-hover:text-primary transition-colors">${project.title}</h4><span class="text-sm font-mono text-text-muted">${project.tagline}</span>`;
                         projectDiv.appendChild(titleDiv);
 
                         const techDiv = document.createElement('div');
@@ -432,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (project.links) {
                             project.links.forEach(link => {
                                 const a = document.createElement('a');
-                                a.classList.add('text-sm', 'font-bold', 'text-text-main', 'dark:text-white', 'hover:text-primary', 'flex', 'items-center', 'gap-1', 'focus:outline-none', 'focus:text-primary');
+                                a.classList.add('text-sm', 'font-bold', 'text-text-main', 'text-white', 'hover:text-primary', 'flex', 'items-center', 'gap-1', 'focus:outline-none', 'focus:text-primary');
                                 a.href = link.href;
                                 a.setAttribute('aria-label', `${link.text} - ${project.title}`);
                                 a.innerHTML = `<span class="material-symbols-outlined text-base" aria-hidden="true">${link.icon}</span> ${link.text}`;
@@ -469,12 +431,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     // Add indented content wrapper
                     const indentedDiv = document.createElement('div');
-                    indentedDiv.classList.add('pl-4', 'border-l', 'border-border-color', 'dark:border-border-color-dark', 'ml-1');
+                    indentedDiv.classList.add('pl-4', 'border-l', 'border-border-color', 'ml-1');
                     
-                    // Add docstring - light mode uses text-gray-500, dark mode uses text-gray-400
+                    // Add docstring with mb-2 and text-gray-400
                     if (data.philosophy.codeBlock.docstring) {
                         const docstringP = document.createElement('p');
-                        docstringP.classList.add('mb-2', 'text-gray-500', 'dark:text-gray-400');
+                        docstringP.classList.add('mb-2', 'text-gray-400');
                         docstringP.innerHTML = data.philosophy.codeBlock.docstring;
                         indentedDiv.appendChild(docstringP);
                     }
@@ -501,12 +463,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const footerSocialLinksContainer = document.getElementById('footer-social-links');
                 if (footerSocialLinksContainer) {
                     if (data.personalInfo.email) {
-                        const emailLink = createLink('Email', `mailto:${data.personalInfo.email}`, ['text-text-muted', 'dark:text-text-muted-dark', 'hover:text-text-main', 'dark:hover:text-white', 'transition-colors', 'flex', 'items-center', 'gap-2', 'focus:outline-none', 'focus:text-text-main', 'dark:focus:text-white'], 'mail', 'Send email');
+                        const emailLink = createLink('Email', `mailto:${data.personalInfo.email}`, ['text-text-muted', 'hover:text-text-main', 'transition-colors', 'flex', 'items-center', 'gap-2', 'focus:outline-none', 'focus:text-text-main'], 'mail', 'Send email');
                         footerSocialLinksContainer.appendChild(emailLink);
                     }
                     
                     if (data.personalInfo.githubUrl) {
-                        const githubLink = createLink('GitHub', data.personalInfo.githubUrl, ['text-text-muted', 'dark:text-text-muted-dark', 'hover:text-text-main', 'dark:hover:text-white', 'transition-colors', 'flex', 'items-center', 'gap-2', 'focus:outline-none', 'focus:text-text-main', 'dark:focus:text-white'], 'code', 'View GitHub profile');
+                        const githubLink = createLink('GitHub', data.personalInfo.githubUrl, ['text-text-muted', 'hover:text-text-main', 'transition-colors', 'flex', 'items-center', 'gap-2', 'focus:outline-none', 'focus:text-text-main'], 'code', 'View GitHub profile');
                         footerSocialLinksContainer.appendChild(githubLink);
                     }
                     
