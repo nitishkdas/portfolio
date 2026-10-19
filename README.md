@@ -174,8 +174,3 @@ MIT License - feel free to use this template for your own portfolio!
 
 Created by Nitish Kr Das
 
-## Contact
-
-- Email: [your-email@example.com]
-- GitHub: [your-github-url]
-- LinkedIn: [your-linkedin-url]
