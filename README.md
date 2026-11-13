@@ -124,25 +124,11 @@ The project uses Tailwind CSS with custom configuration:
 
 ## Deployment
 
-### Static Hosting (Recommended)
+Live at **https://nitishkrdas.in**, hosted on [Render](https://render.com) as a static site.
 
-1. Build the project:
-```bash
-npm run build:tailwind
-```
+`render.yaml` defines the service. Every push to `main` deploys automatically: Render builds the CSS, copies only the site files (`index.html`, `script.js`, `content.json`, `og-image.png`, `dist/output.css`) into `public/` and serves that folder.
 
-2. Deploy these files to your static host:
-   - `index.html`
-   - `script.js`
-   - `content.json`
-   - `dist/output.css`
-
-### GitHub Pages
-
-1. Push to GitHub
-2. Go to Settings > Pages
-3. Select source branch (usually `main`)
-4. Your site will be live at `https://<username>.github.io/<repo-name>/`
+The domain's DNS is managed in Hostinger: an `ALIAS` record for `@` and a `CNAME` for `www`, both pointing to `portfolio-hwv7.onrender.com`.
 
 ## Browser Support
 

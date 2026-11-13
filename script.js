@@ -122,6 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const canvas = document.getElementById('tubes-canvas');
         const wrapper = document.getElementById('tubes-wrapper');
         if (!canvas || !wrapper) return;
+        // Skip the heavy WebGL effect on touch devices and for reduced-motion users
+        if (matchMedia('(prefers-reduced-motion: reduce), (pointer: coarse)').matches) return;
 
         // Use dynamic import like the reference implementation
         const initTubes = async () => {

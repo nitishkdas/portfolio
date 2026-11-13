@@ -6,7 +6,7 @@
     "heroTagline": "Architecting scalable systems, optimizing data pipelines, and building robust APIs.",
     "email": "nitishdas2023@outlook.com",
     "githubUrl": "https://github.com/nitishkdas",
-    "linkedinUrl": "www.linkedin.com/in/nitish-kumar-das",
+    "linkedinUrl": "https://www.linkedin.com/in/nitish-kumar-das",
     "copyright": "© 2026 Nitish Kr Das."
   },
   "navbar": {
@@ -43,7 +43,7 @@
       {
         "name": "Databases",
         "icon": "database",
-        "items": ["PostgreSQL", "Redis", "MongoDB","SQlite"]
+        "items": ["PostgreSQL", "Redis", "MongoDB","SQLite"]
       },
       {
         "name": "Systems & DevOps",

@@ -4,8 +4,9 @@ services:
     runtime: static
     branch: main
     autoDeploy: true
-    buildCommand: npm install && npm run build:tailwind
-    staticPublishPath: .
+    # Publish only the site files, not repo internals (README, AGENTS.md, reference/)
+    buildCommand: npm install && npm run build:tailwind && mkdir -p public/dist && cp index.html script.js content.json og-image.png public/ && cp dist/output.css public/dist/
+    staticPublishPath: public
     headers:
       - path: /*
         name: X-Content-Type-Options
