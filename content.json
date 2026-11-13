@@ -2,8 +2,8 @@
   "personalInfo": {
     "name": "Nitish Kr Das",
     "role": "Backend & Systems Engineer",
-    "opportunityStatus": "Open to opportunities",
-    "heroTagline": "Architecting scalable systems, optimizing data pipelines, and building robust APIs.",
+    "opportunityStatus": "Currently cooking: Us 🍳",
+    "heroTagline": "I build the parts of an app you never see and always depend on.",
     "email": "nitishdas2023@outlook.com",
     "githubUrl": "https://github.com/nitishkdas",
     "linkedinUrl": "https://www.linkedin.com/in/nitish-kumar-das",
@@ -25,10 +25,10 @@
   "about": {
     "titlePrefix": "01.",
     "title": "ABOUT ME",
-    "heading": "Builder at heart.",
+    "heading": "I like the invisible parts.",
     "paragraphs": [
-      "I am a software engineer focused on backend architecture and systems design. My approach to engineering is grounded in <span class=\"text-white font-medium\">correctness, performance, and scalability</span>. I don't just write code; I design systems that can endure high loads and evolve with business needs.",
-      "With a background in building distributed services, I enjoy tackling complex problems involving data consistency, concurrency, and cloud infrastructure. When I'm not optimizing SQL queries or refactoring microservices, I'm exploring the latest in GenAI to automate workflows."
+      "I'm a backend engineer. I design the APIs, data models and plumbing that apps run on, and I care about the unglamorous stuff: <span class=\"text-white font-medium\">clear contracts, correct data and systems that stay up</span>.",
+      "I've built backends for mobile apps, wired IoT sensors to live dashboards, and shipped in Python and C#. When something works but nobody can explain why, I want to know. Lately I'm putting GenAI to work on the tedious parts of my own workflow."
     ]
   },
   "skills": {
@@ -38,7 +38,7 @@
       {
         "name": "Backend & APIs",
         "icon": "dns",
-        "items": ["Python", "FastAPI",  "REST"]
+        "items": ["Python", "FastAPI", "C#", "ASP.NET Core", "REST"]
       },
       {
         "name": "Databases",
@@ -62,19 +62,25 @@
     "title": "SELECTED PROJECTS",
     "list": [
       {
+        "title": "Us",
+        "tagline": "Cooking · App for long-distance couples",
+        "technologies": ["C#", "ASP.NET Core", "PostgreSQL", "EF Core", "Oracle Cloud", "Flutter", "Riverpod"],
+        "description": "A private corner of the internet for two. Share moods, leave notes that unlock later, and keep your story in one place, however many kilometres apart."
+      },
+      {
         "title": "CloudSense",
-        "tagline": "Real-time IoT sensor monitoring",
+        "tagline": "IoT, live",
         "technologies": ["ESP32", "MQTT", "FastAPI", "React", "MongoDB Atlas", "Docker"],
-        "description": "Full-stack IoT system that collects sensor data from ESP32 devices via MQTT, stores in MongoDB Atlas, and displays real-time on a React dashboard. Demonstrates hybrid cloud deployment.",
+        "description": "ESP32 sensors talk MQTT to the cloud, and a React dashboard shows every reading the moment it lands.",
         "links": [
           {"text": "Source", "icon": "code", "href": "https://github.com/nitishkdas/cloudsense"}
         ]
       },
       {
         "title": "Songbook",
-        "tagline": "Digital hymnal collection app",
+        "tagline": "A hymnal in your pocket",
         "technologies": ["Flutter", "GetX", "SQLite", "Dart"],
-        "description": "A digital hymnal collection app for NELC songbooks. Browse, search, and view hymns with lyrics. Supports dark/light theme and offline access.",
+        "description": "Every NELC hymn, searchable in seconds and readable with no signal at all.",
         "links": [
           {"text": "Source", "icon": "code", "href": "https://github.com/nitishkdas/songbook"}
         ]
@@ -91,7 +97,7 @@
         }
   },
   "contact": {
-    "callToAction": "Let's build something scalable."
+    "callToAction": "Got a backend that needs building? Let's talk."
   }
 }
 
